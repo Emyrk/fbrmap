@@ -30,16 +30,7 @@ export class Map extends Component {
     this.layers = {} // Map layer dict (key/value = title/layer)
     this.selectedRegion = null // Store currently selected region
 
-
- 
-    // var bounds = [[0,0], [700,700]];
-    // var image = L.imageOverlay('map.png', bounds).addTo(map);
-    // map.fitBounds(bounds);
     // Render Carto GoT tile baselayer
-    // /map/y-x-z.jpg
-    // L.tileLayer(
-    //  'localhost:8080/map/{y}-{x}-{z}.jpg',
-    //   { crs: L.CRS.EPSG4326 }).addTo(this.map)
     L.tileLayer(
       'https://cartocdn-ashbu.global.ssl.fastly.net/ramirocartodb/api/v1/map/named/tpl_756aec63_3adb_48b6_9d14_331c6cbc47cf/all/{z}/{x}/{y}.png',
       { crs: L.CRS.EPSG4326 }).addTo(this.map)
