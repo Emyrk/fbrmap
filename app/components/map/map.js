@@ -17,23 +17,37 @@ export class Map extends Component {
   constructor (mapPlaceholderId, props) {
     super(mapPlaceholderId, props, template)
 
-    // Initialize Leaflet map
-    this.map = L.map(this.refs.mapContainer, {
-      center: [ 5, 20 ],
-      zoom: 4,
-      maxZoom: 8,
-      minZoom: 4,
-      maxBounds: [ [ 50, -30 ], [ -45, 100 ] ]
-    })
 
-    this.map.zoomControl.setPosition('bottomright') // Position zoom control
-    this.layers = {} // Map layer dict (key/value = title/layer)
-    this.selectedRegion = null // Store currently selected region
+    if(true) {
+      this.map = L.map('map', {
+          crs: L.CRS.Simple,
+          minZoom: -5
+      });
+      var bounds = [[0,0], [1000,1000]];
+      var image = L.imageOverlay('map.png', bounds).addTo(this.map);
+      this.layers = {} // Map layer dict (key/value = title/layer)
+      this.selectedRegion = null // Store currently selected region
+      this.map.fitbounds(bounds);
 
-    // Render Carto GoT tile baselayer
-    L.tileLayer(
-      'https://cartocdn-ashbu.global.ssl.fastly.net/ramirocartodb/api/v1/map/named/tpl_756aec63_3adb_48b6_9d14_331c6cbc47cf/all/{z}/{x}/{y}.png',
-      { crs: L.CRS.EPSG4326 }).addTo(this.map)
+    } else { // Default
+      // Initialize Leaflet map
+      this.map = L.map(this.refs.mapContainer, {
+        center: [ 5, 20 ],
+        zoom: 4,
+        maxZoom: 8,
+        minZoom: 4,
+        maxBounds: [ [ 50, -30 ], [ -45, 100 ] ]
+      })
+
+      this.map.zoomControl.setPosition('bottomright') // Position zoom control
+      this.layers = {} // Map layer dict (key/value = title/layer)
+      this.selectedRegion = null // Store currently selected region
+
+      // Render Carto GoT tile baselayer
+      L.tileLayer(
+        'https://cartocdn-ashbu.global.ssl.fastly.net/ramirocartodb/api/v1/map/named/tpl_756aec63_3adb_48b6_9d14_331c6cbc47cf/all/{z}/{x}/{y}.png',
+        { crs: L.CRS.EPSG4326 }).addTo(this.map)
+    }
   }
 
   /** Add location geojson to the leaflet instance */
