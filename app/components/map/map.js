@@ -31,9 +31,13 @@ export class Map extends Component {
     this.selectedRegion = null // Store currently selected region
 
     // Render Carto GoT tile baselayer
-    L.tileLayer(
-      'https://cartocdn-ashbu.global.ssl.fastly.net/ramirocartodb/api/v1/map/named/tpl_756aec63_3adb_48b6_9d14_331c6cbc47cf/all/{z}/{x}/{y}.png',
+    // /map/y-x-z.jpg
+     // L.tileLayer(
+      '/map/y-x-z.jpg',
       { crs: L.CRS.EPSG4326 }).addTo(this.map)
+    // L.tileLayer(
+    //   'https://cartocdn-ashbu.global.ssl.fastly.net/ramirocartodb/api/v1/map/named/tpl_756aec63_3adb_48b6_9d14_331c6cbc47cf/all/{z}/{x}/{y}.png',
+    //   { crs: L.CRS.EPSG4326 }).addTo(this.map)
   }
 
   /** Add location geojson to the leaflet instance */
