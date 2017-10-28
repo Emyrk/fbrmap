@@ -23,7 +23,8 @@ export class Map extends Component {
       zoom: 4,
       maxZoom: 8,
       minZoom: 4,
-      maxBounds: [ [ 50, -30 ], [ -45, 100 ] ]
+      maxBounds: [ [ 50, -30 ], [ -45, 100 ] ],
+      crs: L.CRS.Simple
     })
 
     this.map.zoomControl.setPosition('bottomright') // Position zoom control
@@ -31,10 +32,8 @@ export class Map extends Component {
     this.selectedRegion = null // Store currently selected region
 
 
-    var map = L.map('map', {
-      crs: L.CRS.Simple
-    });
-    var bounds = [[0,0], [7,7]];
+ 
+    var bounds = [[0,0], [700,700]];
     var image = L.imageOverlay('map.png', bounds).addTo(map);
     map.fitBounds(bounds);
     // Render Carto GoT tile baselayer
