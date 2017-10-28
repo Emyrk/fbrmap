@@ -23,8 +23,7 @@ export class Map extends Component {
       zoom: 4,
       maxZoom: 8,
       minZoom: 4,
-      maxBounds: [ [ 50, -30 ], [ -45, 100 ] ],
-      crs: L.CRS.Simple
+      maxBounds: [ [ 50, -30 ], [ -45, 100 ] ]
     })
 
     this.map.zoomControl.setPosition('bottomright') // Position zoom control
@@ -33,17 +32,17 @@ export class Map extends Component {
 
 
  
-    var bounds = [[0,0], [700,700]];
-    var image = L.imageOverlay('map.png', bounds).addTo(map);
-    map.fitBounds(bounds);
+    // var bounds = [[0,0], [700,700]];
+    // var image = L.imageOverlay('map.png', bounds).addTo(map);
+    // map.fitBounds(bounds);
     // Render Carto GoT tile baselayer
     // /map/y-x-z.jpg
     // L.tileLayer(
     //  'localhost:8080/map/{y}-{x}-{z}.jpg',
     //   { crs: L.CRS.EPSG4326 }).addTo(this.map)
-    // L.tileLayer(
-    //   'https://cartocdn-ashbu.global.ssl.fastly.net/ramirocartodb/api/v1/map/named/tpl_756aec63_3adb_48b6_9d14_331c6cbc47cf/all/{z}/{x}/{y}.png',
-    //   { crs: L.CRS.EPSG4326 }).addTo(this.map)
+    L.tileLayer(
+      'https://cartocdn-ashbu.global.ssl.fastly.net/ramirocartodb/api/v1/map/named/tpl_756aec63_3adb_48b6_9d14_331c6cbc47cf/all/{z}/{x}/{y}.png',
+      { crs: L.CRS.EPSG4326 }).addTo(this.map)
   }
 
   /** Add location geojson to the leaflet instance */
