@@ -18,10 +18,11 @@ export class Map extends Component {
     super(mapPlaceholderId, props, template)
 
 
-    if(true) {
+    if(false) {
       this.map = L.map('map', {
           crs: L.CRS.Simple,
-          minZoom: -5
+          minZoom: -5,
+
       });
       var bounds = [[0,0], [1000,1000]];
       var image = L.imageOverlay('map.png', bounds).addTo(this.map);
@@ -32,16 +33,23 @@ export class Map extends Component {
     } else { // Default
       // Initialize Leaflet map
       this.map = L.map(this.refs.mapContainer, {
-        center: [ 5, 20 ],
+        center: [ 50, 50 ],
         zoom: 4,
-        maxZoom: 8,
-        minZoom: 4,
-        maxBounds: [ [ 50, -30 ], [ -45, 100 ] ]
+        maxZoom: 6,
+        minZoom: 3,
+        crs: L.CRS.Simple
+
       })
 
-      this.map.zoomControl.setPosition('bottomright') // Position zoom control
+      //this.map.zoomControl.setPosition('bottomright') // Position zoom control
       this.layers = {} // Map layer dict (key/value = title/layer)
       this.selectedRegion = null // Store currently selected region
+
+        var bounds = [[0,0], [100,100]];
+
+        var image = L.imageOverlay('map.png', bounds).addTo(this.map);
+
+return
 
       // Render Carto GoT tile baselayer
       L.tileLayer(
@@ -49,6 +57,7 @@ export class Map extends Component {
         { crs: L.CRS.EPSG4326 }).addTo(this.map)
     }
   }
+
 
   /** Add location geojson to the leaflet instance */
   addLocationGeojson (layerTitle, geojson, iconUrl) {
