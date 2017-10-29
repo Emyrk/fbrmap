@@ -60,7 +60,7 @@ export class InfoPanel extends Component {
 
     // Return filled HTML template
     return `
-      <h3>${type.toUpperCase()}</h3>
+      <h3>[${id}] ${type.toUpperCase()}</h3>
       ${summaryHTML}`
   }
 
