@@ -1,0 +1,19 @@
+sudo -u postgres psql
+INSERT INTO points(coordinates) VALUES (ST_GeomFromText('POINT(10.809003 54.097834)',4326));
+ERROR:  column "coordinates" is of type point but expression is of type geometry
+LINE 1: INSERT INTO points(coordinates) VALUES (ST_GeomFromText('POI...
+                                                ^
+HINT:  You will need to rewrite or cast the expression.
+
+ST_GeomFromWKB(bytea WKB, SRID=4326;POINT(10.809003 54.097834));
+
+
+SELECT ST_GeographyFromText('SRID=4326;POINT(10.809003 54.097834)');
+
+UPDATE locations SET 
+geog = ST_GeographyFromText('SRID=4326;POINT(43.75 62.84375)')
+WHERE
+gid=137;
+
+SELECT st_asewkt('0101000020E610000056BB26A4359E25400000000000004440');
+SRID=4326;POINT(10.809003 40)
