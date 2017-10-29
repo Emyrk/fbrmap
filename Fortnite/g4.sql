@@ -9,3 +9,6 @@ INSERT INTO locations (name, type, geog, nonce)
 INSERT INTO locations (name, type, geog, nonce)
                           VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(86.984375 57.953125)'),187233559);
 
+-- Truck Transformer
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(85.953125 47.578125)'),206185130);
