@@ -19,10 +19,9 @@
     text-transform: uppercase;
     margin: 0 auto;
   }
+}
 
-  @media (max-width: 900px) {
-    .title-panel {
-      display:none;
-    }
-  }
+@media screen and (max-width:800px){    
+    .container img{display:none;}
+    display:none;
 }
