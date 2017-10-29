@@ -41,6 +41,57 @@ export class Map extends Component {
 
       })
 
+      /*
+      INSERT INTO table_name (column1, column2, column3, ...)
+      VALUES (value1, value2, value3, ...);
+
+       */
+      
+      function rand() {
+        function getRandomArbitrary(min, max) {
+          return Math.random() * (max - min) + min;
+         }
+         return Math.floor(getRandomArbitrary(0, 9999999999))
+      }
+
+      function format(lng, lat, secret) {
+        var type = "chest"
+        if(secret) {
+          type = "secret-chest"
+        }
+        var geog = "ST_GeographyFromText('SRID=4326;POINT(" + lng + " " + lat + ")')"
+
+        return           `INSERT INTO locations (name, type, geog, nonce)
+                          VALUES (chest, ` + type + `,` + geog +`,` + rand() + `);`
+      }
+
+      this.map.on('click', function(e) {
+          alert("Lng, Lat : " + e.latlng.lng + ", " + e.latlng.lat)
+          switch (event.which) {
+              case 1:
+                  // Left
+                  alert(format(e.latlng.lng, e.latlng.lat, false));
+                  break;
+              case 2:
+                  // Middle
+                  
+                  break;
+              case 3:
+                  // Right
+                  alert(format(e.latlng.lng, e.latlng.lat, true));
+                  break;
+              default:
+                  alert('You have a strange Mouse!');
+          }
+          /*
+          UPDATE locations SET 
+geog = ST_GeographyFromText('SRID=4326;POINT(43.75 62.84375)')
+WHERE
+gid=137;
+           */
+      });
+
+
       //this.map.zoomControl.setPosition('bottomright') // Position zoom control
       this.layers = {} // Map layer dict (key/value = title/layer)
       this.selectedRegion = null // Store currently selected region
