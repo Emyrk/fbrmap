@@ -27,9 +27,22 @@ INSERT INTO locations (name, type, geog, nonce)
 --	Big House
 INSERT INTO locations (name, type, geog, nonce)
                           VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(58.796875 22.5625)'),68016287);
+-- 	Gray Shack East of Big Barn
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(62.015625 23.03125)'),52808530);
 --	Red Barn
 INSERT INTO locations (name, type, geog, nonce)
                           VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(60.828125 23.203125)'),51147114);
+--	Silos
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(60.140625 21.625)'),190437179);
+-- 	South Brown Shack
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(58.8125 20.421875)'),101171166);
+-- Above Quarry
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(65.890625 27.8125)'),179382314);
 
-
-
+-- Forest East of Fatal (close)
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(63.59375 22.46875)'),203957645);
