@@ -1,6 +1,6 @@
 ## Attribution
-### Atlas Of Thrones
-##### An interactive "Game of Thrones" map powered by Leaflet, PostGIS, and Redis.
+### Fortnite Battle Royale Map
+Based off of Atlas Of Thrones found here https://atlasofthrones.com/
 
 #### Basemap
 
