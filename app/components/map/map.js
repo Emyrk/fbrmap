@@ -117,7 +117,7 @@ return
       // Show marker on location
       pointToLayer: (feature, latlng) => {
         return L.marker(latlng, {
-          icon: L.icon({ iconUrl, iconSize: [ 24, 56 ] }),
+          icon: L.icon({ iconUrl, iconSize: [ 30, 30 ] }),
           title: feature.properties.name })
       },
       onEachFeature: this.onEachLocation.bind(this)
