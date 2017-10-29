@@ -1,9 +1,4 @@
 @import '../../_variables.scss';
-
-.layer-toggle {
-  display: none;
-}
-
 .title-panel {
   position: absolute;
   top: 0px;
@@ -13,6 +8,7 @@
   background: rgba(34, 34, 34, 0.8);
   z-index: 1000;
   color: $offWhite;
+  display: none;
 
   h3 {
     text-align: center;
