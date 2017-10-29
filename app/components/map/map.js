@@ -51,7 +51,7 @@ export class Map extends Component {
         function getRandomArbitrary(min, max) {
           return Math.random() * (max - min) + min;
          }
-         return Math.floor(getRandomArbitrary(0, 9999999999))
+         return Math.floor(getRandomArbitrary(0, 214748362))
       }
 
       function format(lng, lat, secret) {

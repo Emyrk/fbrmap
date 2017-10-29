@@ -30,8 +30,8 @@ export class ApiService {
     return this.httpGet(`kingdoms/${id}/size`)
   }
 
-  async getCastleCount (id) {
-    return this.httpGet(`kingdoms/${id}/castles`)
+  async getChestCount (id) {
+    return this.httpGet(`kingdoms/${id}/chests`)
   }
 
   async getKingdomSummary (id) {
@@ -41,7 +41,7 @@ export class ApiService {
   async getAllKingdomDetails (id) {
     return {
       kingdomSize: await this.getKingdomSize(id),
-      castleCount: await this.getCastleCount(id),
+      chestCount: await this.getChestCount(id),
       kingdomSummary: await this.getKingdomSummary(id)
     }
   }

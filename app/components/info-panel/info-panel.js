@@ -33,7 +33,7 @@ export class InfoPanel extends Component {
   /** Create kingdom detail HTML string */
   async getKingdomDetailHtml (id) {
     // Get kingdom metadata
-    let { kingdomSize, castleCount, kingdomSummary } = await this.api.getAllKingdomDetails(id)
+    let { kingdomSize, chestCount, kingdomSummary } = await this.api.getAllKingdomDetails(id)
 
     // Convert size to an easily readable string
     kingdomSize = kingdomSize.toLocaleString(undefined, { maximumFractionDigits: 0 })
@@ -45,7 +45,7 @@ export class InfoPanel extends Component {
     return `
       <h3>KINGDOM</h3>
       <div>Size Estimate - ${kingdomSize} km<sup>2</sup></div>
-      <div>Number of Castles - ${castleCount}</div>
+      <div>Number of Chests - ${chestCount}</div>
       ${summaryHTML}
       `
   }
