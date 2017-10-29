@@ -5,6 +5,7 @@ import { ApiService } from './services/api'
 import { SearchService } from './services/search'
 import { Map } from './components/map/map'
 import { LayerPanel } from './components/layer-panel/layer-panel'
+import { TitlePanel } from './components/title-panel/title-panel'
 import { InfoPanel } from './components/info-panel/info-panel'
 import { SearchBar } from './components/search-bar/search-bar'
 
@@ -52,6 +53,9 @@ class ViewController {
         event => { this.mapComponent.toggleLayer(event.detail) }
       }
     })
+
+    // Initialize Title Toggle Panel
+    this.titlePanel = new TitlePanel('title-panel-placeholder', {})
 
     // Initialize Search Panel
     this.searchBar = new SearchBar('search-panel-placeholder', {

@@ -1,0 +1,21 @@
+@import '../../_variables.scss';
+
+.layer-toggle {
+  display: none;
+}
+
+.title-panel {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 12px;
+  background: $midDark;
+  z-index: 1000;
+  color: $offWhite;
+
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+  }
+}
