@@ -19,4 +19,10 @@
     text-transform: uppercase;
     margin: 0 auto;
   }
+
+  @media (max-width: 900px) {
+    .title-panel {
+      display:none;
+    }
+  }
 }
