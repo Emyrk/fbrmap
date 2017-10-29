@@ -23,7 +23,7 @@ class ViewController {
       this.api = new ApiService('http://13.58.203.197:5000/')
     }
 
-    this.locationPointTypes = [ 'castle', 'city', 'town', 'ruin', 'region', 'landmark', 'chest' ]
+    this.locationPointTypes = ['city', 'town', 'ruin', 'region', 'landmark', 'chest' ]
     this.initializeComponents()
     this.loadMapData()
   }
