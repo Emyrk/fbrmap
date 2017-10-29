@@ -14,13 +14,13 @@ class ViewController {
   constructor () {
     document.getElementById('app').outerHTML = template
 
-    this.searchService = new SearchService() // Initialize search service
+    this.searchService = new SearchService() // Initialize search ser:wqvice
 
     // Initialize API service
     if (window.location.hostname === 'localhost') {
       this.api = new ApiService('http://localhost:5000/')
     } else {
-      this.api = new ApiService('http://13.58.203.197:5000/')
+      this.api = new ApiService('https://data.fornitebrmap.com:5000/')
     }
 
     this.locationPointTypes = ['chest']//, 'city', 'town', 'ruin', 'region', 'landmark']
