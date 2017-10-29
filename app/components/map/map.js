@@ -96,9 +96,9 @@ gid=137;
         this.layers = {} // Map layer dict (key/value = title/layer)
         this.selectedRegion = null // Store currently selected region
 
-        var bounds = [[0,0], [100,100]];
+        var bounds = [[0,0], [99.8, 99.9]];
 
-        var image = L.imageOverlay('map.png', bounds).addTo(this.map);
+        var image = L.imageOverlay('mapHi.jpg', bounds).addTo(this.map);
 
 return
 
