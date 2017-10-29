@@ -17,10 +17,17 @@ INSERT INTO locations (name, type, geog, nonce)
 
 
 
-
-
-
-
+-- Prison
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(76.265625 25.921875)'),4561173);
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(76.828125 27.9375)'),195295535);
+--	Prison NorthEast Tower
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(77.3125 28.515625)'),25258309);
+-- 	Prison Building
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(76.1875 26.671875)'),49433927);
 
 
 
