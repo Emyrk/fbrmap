@@ -32,8 +32,6 @@ export class InfoPanel extends Component {
 
   /** Create kingdom detail HTML string */
   async getKingdomDetailHtml (id) {
-    // Disable kingdoms
-    return
     // Get kingdom metadata
     let { kingdomSize, chestCount, kingdomSummary } = await this.api.getAllKingdomDetails(id)
 

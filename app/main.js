@@ -46,7 +46,7 @@ class ViewController {
 
     // Initialize Layer Toggle Panel
     this.layerPanel = new LayerPanel('layer-panel-placeholder', {
-      data: { layerNames: ['kingdom', ...this.locationPointTypes] },
+      data: { layerNames: [...this.locationPointTypes] },// Remove Kingdon ['kingdom', ...this.locationPointTypes] },
       events: { layerToggle:
         // Toggle layer in map controller on "layerToggle" event
         event => { this.mapComponent.toggleLayer(event.detail) }
