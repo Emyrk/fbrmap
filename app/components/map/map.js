@@ -59,7 +59,7 @@ export class Map extends Component {
         var geog = "ST_GeographyFromText('SRID=4326;POINT(" + lng + " " + lat + ")')"
 
         return           `INSERT INTO locations (name, type, geog, nonce)
-                          VALUES (chest, ` + type + `,` + geog +`,` + rand() + `);`
+                          VALUES ('chest', '` + type + `',` + geog +`,` + rand() + `);`
       }
 
       this.map.on('click', function(e) {
