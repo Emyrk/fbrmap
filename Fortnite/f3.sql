@@ -7,3 +7,9 @@ INSERT INTO locations (name, type, geog, nonce)
 -- Wailing Woods Center
 INSERT INTO locations (name, type, geog, nonce)
     VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(82.140625 70.203125)'),15479441);
+-- Wailing
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(82.734375 70.78125)'),136257207);
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(81.53125 69.59375)'),5677821);
+--
