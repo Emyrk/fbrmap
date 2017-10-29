@@ -29,3 +29,19 @@ INSERT INTO locations (name, type, geog, nonce)
                           VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(74.2265625 45.4140625)'),128012224);
 INSERT INTO locations (name, type, geog, nonce)
                           VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(71.84375 46)'),43696695);
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(73.109375 48.609375)'),344227);
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(71.2578125 48.703125)'),81491592);
+
+
+
+
+
+
+
+
+
+
+
+                          
