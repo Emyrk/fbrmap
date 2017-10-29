@@ -23,3 +23,7 @@ a {
 #app-container {
   display: block;
 }
+
+@media screen and (max-width:800px){    
+    .title-panel img{display:none;}
+}
