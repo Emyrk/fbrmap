@@ -97,6 +97,7 @@ class ViewController {
 
   /** Format icon url for layer type  */
   getIconUrl (layerName) {
+    return `icons/${layerName}.svg`
     return `https://cdn.patricktriest.com/atlas-of-thrones/icons/${layerName}.svg`
   }
 }
