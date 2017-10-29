@@ -74,16 +74,19 @@ class ViewController {
     const kingdomsGeojson = await this.api.getKingdoms()
 
     // Add boundary data to search service
-    this.searchService.addGeoJsonItems(kingdomsGeojson, 'kingdom')
+    //this.searchService.addGeoJsonItems(kingdomsGeojson, 'kingdom')
 
     // Add data to map
-    this.mapComponent.addKingdomGeojson(kingdomsGeojson)
+    //this.mapComponent.addKingdomGeojson(kingdomsGeojson)
 
     // Show kingdom boundaries
-    this.layerPanel.toggleMapLayer('kingdom')
+    this.layerPanel.toggleMapLayer('chest')
 
     // Download location point geodata
     for (let locationType of this.locationPointTypes) {
+      if(locationType != "chest") {
+        continue // Temporary
+      }
       // Download location type GeoJSON
       const geojson = await this.api.getLocations(locationType)
 
