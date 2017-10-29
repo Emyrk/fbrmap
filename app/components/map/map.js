@@ -35,7 +35,7 @@ export class Map extends Component {
       this.map = L.map(this.refs.mapContainer, {
         center: [ 50, 50 ],
         zoom: 4,
-        maxZoom: 6,
+        maxZoom: 8,
         minZoom: 3,
         crs: L.CRS.Simple
 

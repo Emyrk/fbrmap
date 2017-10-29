@@ -17,7 +17,7 @@ router.use(cache.addResponseToCache)
 
 // Check that id param is valid number
 const idValidator = validate({
-  params: { id: joi.number().min(0).max(1000).required() }
+  params: { id: joi.number().min(0).max(100000).required() }
 })
 
 // Check that query param is valid location type

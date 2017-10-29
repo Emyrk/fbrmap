@@ -14,16 +14,16 @@ class ViewController {
   constructor () {
     document.getElementById('app').outerHTML = template
 
-    this.searchService = new SearchService() // Initialize search service
+    this.searchService = new SearchService() // Initialize search ser:wqvice
 
     // Initialize API service
     if (window.location.hostname === 'localhost') {
       this.api = new ApiService('http://localhost:5000/')
     } else {
-      this.api = new ApiService('http://13.58.203.197:5000/')
+      this.api = new ApiService('https://data.fortnitebrmap.com/')
     }
 
-    this.locationPointTypes = ['chest', 'city', 'town', 'ruin', 'region', 'landmark']
+    this.locationPointTypes = ['chest']//, 'city', 'town', 'ruin', 'region', 'landmark']
     this.initializeComponents()
     this.loadMapData()
   }
@@ -46,7 +46,7 @@ class ViewController {
 
     // Initialize Layer Toggle Panel
     this.layerPanel = new LayerPanel('layer-panel-placeholder', {
-      data: { layerNames: ['kingdom', ...this.locationPointTypes] },
+      data: { layerNames: [...this.locationPointTypes] },// Remove Kingdon ['kingdom', ...this.locationPointTypes] },
       events: { layerToggle:
         // Toggle layer in map controller on "layerToggle" event
         event => { this.mapComponent.toggleLayer(event.detail) }
@@ -71,7 +71,7 @@ class ViewController {
   /** Load map data from the API */
   async loadMapData () {
     // Download kingdom boundaries
-    const kingdomsGeojson = await this.api.getKingdoms()
+    // const kingdomsGeojson = await this.api.getKingdoms()
 
     // Add boundary data to search service
     //this.searchService.addGeoJsonItems(kingdomsGeojson, 'kingdom')
@@ -103,7 +103,7 @@ class ViewController {
   /** Format icon url for layer type  */
   getIconUrl (layerName) {
     return `icons/${layerName}.svg`
-    return `https://cdn.patricktriest.com/atlas-of-thrones/icons/${layerName}.svg`
+    //return `https://cdn.patricktriest.com/atlas-of-thrones/icons/${layerName}.svg`
   }
 }
 
