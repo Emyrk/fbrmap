@@ -4,6 +4,10 @@ INSERT INTO locations (name, type, geog, nonce)
                           VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(36.3125 15.25)'),132912205);
 
 
-
-
+-- Top of hill north of flush
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(38.359375 19.75)'),83977319);
+-- Abandoned House
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(32.4375 25.359375)'),41204139);
 

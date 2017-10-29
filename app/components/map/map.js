@@ -92,9 +92,9 @@ gid=137;
       });
 
 
-      //this.map.zoomControl.setPosition('bottomright') // Position zoom control
-      this.layers = {} // Map layer dict (key/value = title/layer)
-      this.selectedRegion = null // Store currently selected region
+        //this.map.zoomControl.setPosition('bottomright') // Position zoom control
+        this.layers = {} // Map layer dict (key/value = title/layer)
+        this.selectedRegion = null // Store currently selected region
 
         var bounds = [[0,0], [100,100]];
 
