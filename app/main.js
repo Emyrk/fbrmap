@@ -80,7 +80,6 @@ class ViewController {
     //this.mapComponent.addKingdomGeojson(kingdomsGeojson)
 
     // Show kingdom boundaries
-    // this.layerPanel.toggleMapLayer('chest')
 
     // Download location point geodata
     for (let locationType of this.locationPointTypes) {
@@ -96,6 +95,9 @@ class ViewController {
       // Add data to map
       this.mapComponent.addLocationGeojson(locationType, geojson, this.getIconUrl(locationType))
     }
+
+    // Show chests
+    this.layerPanel.toggleMapLayer('chest')
   }
 
   /** Format icon url for layer type  */
