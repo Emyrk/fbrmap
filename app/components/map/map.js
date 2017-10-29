@@ -83,6 +83,7 @@ export class Map extends Component {
               default:
                   alert('You have a strange Mouse!');
           }
+          alert(e.which)
           /*
           UPDATE locations SET 
 geog = ST_GeographyFromText('SRID=4326;POINT(43.75 62.84375)')
