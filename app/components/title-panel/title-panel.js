@@ -12,5 +12,6 @@ export class TitlePanel extends Component {
    * @param { Object } props.events.layerToggle Layer toggle event listener
    */
   constructor (placeholderId, props) {
+    super(placeholderId, props, template)
   }
 }
