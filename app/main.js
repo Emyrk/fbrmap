@@ -20,7 +20,7 @@ class ViewController {
     if (window.location.hostname === 'localhost') {
       this.api = new ApiService('http://localhost:5000/')
     } else {
-      this.api = new ApiService('https://data.fornitebrmap.com:5000/')
+      this.api = new ApiService('https://data.fornitebrmap.com/')
     }
 
     this.locationPointTypes = ['chest']//, 'city', 'town', 'ruin', 'region', 'landmark']
