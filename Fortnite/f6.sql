@@ -5,6 +5,11 @@ INSERT INTO locations (name, type, geog, nonce)
                           VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(83.90625 23.921875)'),209521637);
 INSERT INTO locations (name, type, geog, nonce)
                           VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(83.90625 23.921875)'),209521637);
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(84.36328125 24.08984375)'),21532862);                    
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(83.88671875 24.54296875)'),145570092);
+
 	-- South, no tree
 INSERT INTO locations (name, type, geog, nonce)
                           VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(79.296875 19.4375)'),114155928);
@@ -29,8 +34,10 @@ INSERT INTO locations (name, type, geog, nonce)
 INSERT INTO locations (name, type, geog, nonce)
                           VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(76.1875 26.671875)'),49433927);
 
-
-
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(74.296875 28.4375)'),157925942);
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(74.96875 25.53125)'),210664840);
 
 
 
