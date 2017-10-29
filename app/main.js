@@ -20,7 +20,7 @@ class ViewController {
     if (window.location.hostname === 'localhost') {
       this.api = new ApiService('http://localhost:5000/')
     } else {
-      this.api = new ApiService('https://api.atlasofthrones.com/')
+      this.api = new ApiService('http://13.58.203.197:5000/')
     }
 
     this.locationPointTypes = [ 'castle', 'city', 'town', 'ruin', 'region', 'landmark' ]
