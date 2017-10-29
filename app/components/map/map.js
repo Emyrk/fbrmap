@@ -56,9 +56,6 @@ export class Map extends Component {
 
       function format(lng, lat, secret) {
         var type = "chest"
-        if(secret) {
-          type = "secret-chest"
-        }
         var geog = "ST_GeographyFromText('SRID=4326;POINT(" + lng + " " + lat + ")')"
 
         return           `INSERT INTO locations (name, type, geog, nonce)
@@ -70,7 +67,8 @@ export class Map extends Component {
           switch (event.which) {
               case 1:
                   // Left
-                  alert(format(e.latlng.lng, e.latlng.lat, false));
+                  // alert(format(e.latlng.lng, e.latlng.lat, false));
+                  console.log(format(e.latlng.lng, e.latlng.lat, false))
                   break;
               case 2:
                   // Middle
@@ -78,6 +76,7 @@ export class Map extends Component {
                   break;
               case 3:
                   // Right
+                  // console.log(format(e.latlng.lng, e.latlng.lat, true))
                   alert(format(e.latlng.lng, e.latlng.lat, true));
                   break;
               default:
