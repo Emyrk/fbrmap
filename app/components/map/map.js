@@ -66,7 +66,7 @@ export class Map extends Component {
       }
 
       this.map.on('click', function(e) {
-          alert("Lng, Lat : " + e.latlng.lng + ", " + e.latlng.lat)
+          // alert("Lng, Lat : " + e.latlng.lng + ", " + e.latlng.lat)
           switch (event.which) {
               case 1:
                   // Left
@@ -83,7 +83,7 @@ export class Map extends Component {
               default:
                   alert('You have a strange Mouse!');
           }
-          alert(e.which)
+          // alert(e.which)
           /*
           UPDATE locations SET 
 geog = ST_GeographyFromText('SRID=4326;POINT(43.75 62.84375)')
