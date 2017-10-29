@@ -69,6 +69,6 @@ export class InfoPanel extends Component {
     return `
       <h3>Summary</h3>
       <div>${info.summary}</div>
-      <div><a href="${info.url}" target="_blank" rel="noopener">Read More...</a></div>`
+      <!-- <div><a href="${info.url}" target="_blank" rel="noopener">Read More...</a></div> -->`
   }
 }
