@@ -71,7 +71,7 @@ class ViewController {
   /** Load map data from the API */
   async loadMapData () {
     // Download kingdom boundaries
-    const kingdomsGeojson = await this.api.getKingdoms()
+    // const kingdomsGeojson = await this.api.getKingdoms()
 
     // Add boundary data to search service
     //this.searchService.addGeoJsonItems(kingdomsGeojson, 'kingdom')
@@ -103,7 +103,7 @@ class ViewController {
   /** Format icon url for layer type  */
   getIconUrl (layerName) {
     return `icons/${layerName}.svg`
-    return `https://cdn.patricktriest.com/atlas-of-thrones/icons/${layerName}.svg`
+    //return `https://cdn.patricktriest.com/atlas-of-thrones/icons/${layerName}.svg`
   }
 }
 
