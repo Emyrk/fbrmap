@@ -1,3 +1,7 @@
+
+https://blog.patricktriest.com/game-of-thrones-map-node-postgres-redis/
+psql postgres
+
 sudo -u postgres psql
 INSERT INTO points(coordinates) VALUES (ST_GeomFromText('POINT(10.809003 54.097834)',4326));
 ERROR:  column "coordinates" is of type point but expression is of type geometry
