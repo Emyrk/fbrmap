@@ -18,7 +18,9 @@ INSERT INTO locations (name, type, geog, nonce)
 
 -- Pleasent
 INSERT INTO locations (name, type, geog, nonce)
-                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(29.578125 67.78125)'),103442506);
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(29.578125 67.78125)'),103442506);                  
+INSERT INTO locations (name, type, geog, nonce)
+                          VALUES ('chest', 'chest',ST_GeographyFromText('SRID=4326;POINT(30.03125 69.1875)'),76809714);
 
 
 
